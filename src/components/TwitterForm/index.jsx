@@ -7,6 +7,7 @@ import {
   faSmile,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import PropTypes from "prop-types";
 import { useRef } from "react";
 
 export function TwitterForm({ onTweet }) {
@@ -30,31 +31,31 @@ export function TwitterForm({ onTweet }) {
         <div className="flex space-x-4">
           <FontAwesomeIcon
             icon={faImage}
-            className="text-blue-400 cursor-pointer"
+            className="text-twitter-blue cursor-pointer"
           />
           <FontAwesomeIcon
             icon={faFilm}
-            className="text-blue-400 cursor-pointer"
+            className="text-twitter-blue cursor-pointer"
           />
           <FontAwesomeIcon
             icon={faChartBar}
-            className="text-blue-400 cursor-pointer"
+            className="text-twitter-blue cursor-pointer"
           />
           <FontAwesomeIcon
             icon={faSmile}
-            className="text-blue-400 cursor-pointer"
+            className="text-twitter-blue cursor-pointer"
           />
           <FontAwesomeIcon
             icon={faCalendarAlt}
-            className="text-blue-400 cursor-pointer"
+            className="text-twitter-blue cursor-pointer"
           />
           <FontAwesomeIcon
             icon={faMapMarkedAlt}
-            className="text-blue-400 cursor-pointer"
+            className="text-twitter-blue cursor-pointer"
           />
         </div>
         <button
-          className="bg-blue-400 text-white font-bold px-4 py-2 rounded-full hover:bg-blue-600 transition duration-200"
+          className="bg-twitter-blue text-white font-bold px-4 py-2 rounded-full hover:bg-blue-600 transition duration-200"
           onClick={handleSubmit}
         >
           Tweet
@@ -62,4 +63,8 @@ export function TwitterForm({ onTweet }) {
       </div>
     </div>
   );
+}
+
+TwitterForm.propTypes = {
+  onTweet: PropTypes.func
 }
